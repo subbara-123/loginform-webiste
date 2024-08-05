@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+    }
+    div{
+        border-style: solid;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: pink;
+        box-shadow: 10px 10px green;
+    }
+    .buttons{
+        background-color: purple;
+        color: white;
+        width: 100px;
+        height: 30px;
+        border-color: white;
+    }
+    .labels{
+        color: green;
+    }
+    .boxes{
+         height: 20px;
+         border-radius: 5px;
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+        color: blue;
+    }
+</style>
+<body>
+    <div>
+    <h1><b>Login Form</b></h1>
+    <form  method="get" action="" onsubmit="return validate()">
+        <label for="uname" class="labels">Username</label>&nbsp;<input type="text" name="uname" id="uname" required class="boxes">  <br> <br>
+        <label for="pword" class="labels">Password</label>&nbsp;<input type="password" name="" id="pword" required class="boxes"> <br> <br>
+        <input type="submit" name="" class="buttons">&nbsp;&nbsp;<input type="reset" name="" class="buttons">
+    </form>
+</div>
+    <script>
+        function validate()
+        {
+            let un=document.getElementById("uname");
+            let pw=document.getElementById("pword")
+            if (un.value.trime()="")
+        {
+            window.alert("username can't be empty");
+            un.value="";
+            return false;
+        }
+        else if(pw.value.trime()==""){
+            window.alert("password can't be empty");
+            pw.value="";
+            return false;
+        }
+        }
+    </script>
+</body>
+</html>
